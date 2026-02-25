@@ -1,13 +1,14 @@
 import Button from "./Button";
+import Card from "./Card";
 
 const StartScreen = ({ onStart }) => {
   return (
-    <div className="start-container">
-      <h1>JavaScript Quiz</h1>
+    <Card>
+      <h1 className="start-title">JavaScript Quiz</h1>
       <Button className="start-btn" onClick={() => onStart()}>
         Rozpocznij quiz
       </Button>
-    </div>
+    </Card>
   );
 };
 export default StartScreen;

@@ -9,7 +9,18 @@ body {
   background-color: #fff;
 }
 
-.start-container {
+.quiz-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 780px;
+  margin: 40px auto; /* Centruje na środku ekranu */
+  text-align: center;
+}
+
+/* START SCREEN */
+
+.start-title {
   color: black;
 }
 
@@ -19,15 +30,34 @@ body {
   padding: 0.5rem 9rem;
 }
 
-.question-container {
-  display: flex;
-  flex-direction: column;
+/* QUESTIONS SCREEN */
+
+.question {
+  color: royalblue;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-.question-container span,
+
 .answers-review h3 {
   color: royalblue;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+/* SUMMARY SCREEN */
+
+.summary-title {
+  font-size: 3rem;
+}
+
+.summary-subtitle {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.summaryItem-item {
+  font-weight: bold;
+  color: black;
 }
 
 .answers-list {
@@ -36,10 +66,12 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
+  font-size: 1.25rem;
 }
 
 .answers-review {
   text-align: left;
+  margin-bottom: 4rem;
 }
 
 .bold {
@@ -50,23 +82,6 @@ body {
 .answer-btn {
   background-color: darkgreen;
   width: 600px;
-}
-
-.summary-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-  gap: 1rem;
-}
-
-.summary-container h2 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.summary-subheader {
-  font-size: 1.5rem;
 }
 
 .restart-btn {

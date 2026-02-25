@@ -1,5 +1,6 @@
 import Button from "./Button";
-import SummaryItem from "./SummaryItem"; //
+import SummaryItem from "./SummaryItem";
+import Card from "./Card";
 
 const SummaryScreen = ({
   score,
@@ -8,15 +9,18 @@ const SummaryScreen = ({
   questions,
   onRestart,
 }) => {
-  const percentage = ((score / totalQuestions) * 100).toFixed(2);
+  const percentage = totalQuestions ? (score / totalQuestions) * 100 : 0;
   const isPassed = percentage >= 80;
 
   return (
-    <div className="summary-container">
-      <h2 style={{ color: isPassed ? "green" : "red" }}>
+    <Card>
+      <h2
+        className="summary-title"
+        style={{ color: isPassed ? "green" : "red" }}
+      >
         {isPassed ? "Zaliczone!" : "Niestety, quiz niezaliczony"}
       </h2>
-      <span className="summary-subheader">
+      <span className="summary-subtitle">
         Twój wynik to:{" "}
         <span
           style={{
@@ -30,7 +34,6 @@ const SummaryScreen = ({
       <div className="answers-review">
         {questions.map((question, index) => {
           const userAnswer = userAnswers[index];
-
           return (
             <SummaryItem
               key={index}
@@ -46,7 +49,7 @@ const SummaryScreen = ({
       <Button className="restart-btn" onClick={() => onRestart()}>
         Powrót do startu
       </Button>
-    </div>
+    </Card>
   );
 };
 

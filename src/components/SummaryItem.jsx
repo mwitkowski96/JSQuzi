@@ -1,6 +1,6 @@
 const SummaryItem = ({ index, questionText, userAnswerText, isCorrect }) => {
   return (
-    <div className="summary-item">
+    <div className="summaryItem-item">
       <h3>
         Pytanie: {index} : {questionText}
       </h3>

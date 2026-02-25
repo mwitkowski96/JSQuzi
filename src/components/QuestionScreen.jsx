@@ -1,9 +1,10 @@
 import Button from "./Button";
+import Card from "./Card";
 
 const QuestionScreen = ({ questionData, questionNumber, onAnswer }) => {
   return (
-    <div className="question-container">
-      <span>
+    <Card>
+      <span className="question">
         Pytanie {questionNumber}: {questionData.text}
       </span>
       <div className="answers-list">
@@ -17,7 +18,7 @@ const QuestionScreen = ({ questionData, questionNumber, onAnswer }) => {
           </Button>
         ))}
       </div>
-    </div>
+    </Card>
   );
 };
 
